@@ -14,10 +14,17 @@ public class baby extends Actor
      */
     public void act() 
     {
+        
         if( Greenfoot.isKeyDown( "up" ) ){
-        setRotation(0);
+        setRotation(-90);
         move(1);
     }// Add
     
+
+        if( Greenfoot.isKeyDown( "right" ) ){
+        setRotation(0);
+        move(1);
+}// Add your action code here.
+
     }    
 }
