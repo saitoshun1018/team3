@@ -20,7 +20,7 @@ public class startmenu extends World
     }
     public void act()
     {    
-        if(Greenfoot.isKeyDown("a")){
+        if(Greenfoot.isKeyDown("enter")){
             World Myworld = new a();
             Greenfoot.setWorld(Myworld);
         }

@@ -20,9 +20,18 @@ public class MyWorld extends World
     }
       public void act()
     {    
-        if(Greenfoot.isKeyDown("Enter")){
-            World Myworld = new startmenu();
+        if(Greenfoot.isKeyDown("a")){
+            World Myworld = new a();
             Greenfoot.setWorld(Myworld);
         }
+        if(Greenfoot.isKeyDown("b")){
+            World Myworld = new b();
+            Greenfoot.setWorld(Myworld);
+        }
+        if(Greenfoot.isKeyDown("c")){
+            World Myworld = new c();
+            Greenfoot.setWorld(Myworld);
+        }
+        
     }
 }
