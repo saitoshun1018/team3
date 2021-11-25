@@ -29,5 +29,9 @@ public class interimpresident extends Actor
         setLocation(x-3,y);
     } 
     
-    }    
+        if(Greenfoot.isKeyDown( "e" )){
+            getWorld().addObject( new ballet(), x, y );
+    }
+    }
+            
 }
