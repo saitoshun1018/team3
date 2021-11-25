@@ -19,14 +19,15 @@ public class interimpresident extends Actor
            if( Greenfoot.isKeyDown( "up" ) ){
         setLocation(x,y-3);
     }
-        if( Greenfoot.isKeyDown( "right" ) ){
+           if( Greenfoot.isKeyDown( "right" ) ){
         setLocation(x+3,y);
     } 
            if( Greenfoot.isKeyDown( "down" ) ){
         setLocation(x,y+3);
     }
-        if( Greenfoot.isKeyDown( "left" ) ){
+           if( Greenfoot.isKeyDown( "left" ) ){
         setLocation(x-3,y);
     } 
+    
     }    
 }
