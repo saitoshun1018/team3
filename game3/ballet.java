@@ -13,7 +13,7 @@ public class ballet extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
   
-    int time=10;
+    int time=5;
     public void act() 
     {
         // Add your action code here.
