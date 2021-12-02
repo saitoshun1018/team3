@@ -8,25 +8,26 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class teki extends Actor
 {
-    private int flag_tama = 0;
-    private int dig = 0;
     /**
-     * Act - do whatever the ari wants to do. This method is called whenever
+     * Act - do whatever the interimpresident wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    int flag_tama=0;
     public void act() 
     {
-        int x = getX();
-        int y = getY();
-        if( flag_tama > 0 ) flag_tama--;
-        if( Greenfoot.isKeyDown( "e" ) ){
-             {if( flag_tama == 0 ){
-                getWorld().addObject( new tekiweapon(getRotation()), x, y );
-                //Greenfoot.playSound("georgeshot.mp3");
-                flag_tama = 40;
-            }
-        }  
-    }        
+        int x =getX();
+        int y =getY();
+           
+    if(flag_tama>1){flag_tama--;}
+    else{    
+        if(Greenfoot.isKeyDown( "e" )){
+            getWorld().addObject( new tekiweapon(), x, y+90 );
+            flag_tama = 40;
+        }
+    }
 }
-}    
+}
+
+
+    
         

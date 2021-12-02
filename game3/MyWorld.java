@@ -1,5 +1,13 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
+import java.util.Date;
+import java.util.Timer;
+import java.util.TimerTask;
+import java.util.Random;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * Write a description of class MyWorld here.
  * 
@@ -15,8 +23,28 @@ public class MyWorld extends World
      */
     public MyWorld()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
+
+        Timer timer = new Timer();
+        TimerTask task = new TimerTask(){
+            public void run(){
+                Random random = new Random();
+                int randomValue = random.nextInt(1);
+                
+                switch (randomValue){
+                    case 0:
+                        addObject(new teki(), 1600, 700);
+                        break;
+                    case 1:
+                        addObject(new teki(), 1600, 400);
+                        break;
+                    case 2:
+                        addObject(new teki(), 1600, 100);
+                        break;
+                    
+                }
+            }
+        };
     }
       public void act()
     {    
