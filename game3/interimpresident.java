@@ -33,7 +33,7 @@ public class interimpresident extends Actor
     else{    
         if(Greenfoot.isKeyDown( "e" )){
             getWorld().addObject( new ballet(), x, y-90 );
-            flag_tama = 40;
+            flag_tama = 10;
         }
     }
     
