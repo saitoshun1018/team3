@@ -13,19 +13,21 @@ public class ballet extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
   
-    int time=5;
+    int time=20;
     public void act() 
     {
         // Add your action code here.
-        move(1);
+        move(0);
         Actor actor = getOneIntersectingObject( ballet.class );
         int x =getX();
         int y =getY();
         
         setLocation(x,y-90);
-        time--;
-        
-        if(time<1)
-        getWorld().removeObject(this);
+        while(time!=0){
+            
+            time--;
+            if(time<1)
+                getWorld().removeObject(this);
+        }
     }    
 }
