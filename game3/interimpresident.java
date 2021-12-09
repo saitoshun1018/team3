@@ -13,6 +13,7 @@ public class interimpresident extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     int flag_tama=0;
+    int hp=1;
     public void act() 
     {
         int x =getX();
@@ -37,7 +38,14 @@ public class interimpresident extends Actor
         }
     }
     
-    
+    Actor actor= getOneIntersectingObject(teki.class);
+        if(actor != null){
+            hp--;
+        }
+        
+        if(hp == 0){
+            Greenfoot.stop();
+        }
     }
             
 }
