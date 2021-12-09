@@ -13,6 +13,7 @@ public class interimpresident extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     int flag_tama=0;
+    int hp=1;
     public void act() 
     {
         int x =getX();
@@ -33,11 +34,18 @@ public class interimpresident extends Actor
     else{    
         if(Greenfoot.isKeyDown( "e" )){
             getWorld().addObject( new ballet(), x, y-90 );
-            flag_tama = 10;
+            flag_tama = 20;
         }
     }
     
-    
+    Actor actor= getOneIntersectingObject(teki.class);
+        if(actor != null){
+            hp--;
+        }
+        
+        if(hp == 0){
+            Greenfoot.stop();
+        }
     }
             
 }

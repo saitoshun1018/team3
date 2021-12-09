@@ -8,7 +8,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class tekiweapon extends Actor
 {
-    int time=250;
+
+    
+
+    int time=10;
+
     public void act() 
     {
         // Add your action code here.

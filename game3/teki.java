@@ -18,12 +18,22 @@ public class teki extends Actor
         int x =getX();
         int y =getY();
            
+
     if(flag_tama>0){flag_tama--;}
+
+    /*if(flag_tama>1){flag_tama--;}
+>>>>>>> e73620e41626d18b5c18ff51f7df9b04b1b9b1ef
     else{    
-        if(Greenfoot.isKeyDown( "e" )){
+        if(Greenfoot.isKeyDown( "q" )){
             getWorld().addObject( new tekiweapon(), x, y+90 );
             flag_tama = 40;
         }
+    }*/
+    
+    Actor actor=getOneIntersectingObject(ballet.class);
+    
+    if(actor !=null){
+        getWorld().removeObject(this);
     }
     
     
