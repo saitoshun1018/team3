@@ -13,7 +13,8 @@ public class a extends World
      * Constructor for objects of class hakodate.
      * 
      */
-    int count=0;
+    int pattern=0;
+    public int count=0;
     public a()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -25,14 +26,13 @@ public class a extends World
     }
     public void act(){
        
-        for(int i=0;i<4;i++){
-            spawnvirus();
-            count++;
-            
-        }
+           spawnvirus();
+          
+        
     }
     public void spawnvirus(){
-        switch(count){
+        if(count==4){return;}
+        switch(pattern){
             case 0: addObject(new teki(), 300,30);
                     break;
             case 1: addObject(new teki(), 150,60);
@@ -42,5 +42,8 @@ public class a extends World
             case 3: addObject(new teki(), 400,60);
                     break;
         }
+        count++;
+        pattern++;
+        if(pattern==4){pattern=0;}
     }
 }
