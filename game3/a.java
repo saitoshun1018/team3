@@ -21,7 +21,7 @@ public class a extends World
         super(600, 400, 1); 
         
         addObject(new interimpresident(), 300, 350);
-        
+        addObject(new teki(), 300, 50);
         
     }
     public void act(){
