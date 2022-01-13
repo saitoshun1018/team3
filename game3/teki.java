@@ -13,29 +13,29 @@ public class teki extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     int flag_tama=0;
+    int KP=0;
     public void act() 
     {
         int x =getX();
         int y =getY();
         
         move(1);
-    if(Greenfoot.getRandomNumber(10)<1){
-    }
-    if(isAtEdge()){
+        if(Greenfoot.getRandomNumber(10)<1){
+        }
+        if(isAtEdge()){
         turn(180);
-    }
+        }
 
-    if(flag_tama>0){flag_tama--;}
-
-    Actor actor=getOneIntersectingObject(ballet.class);
+        if(flag_tama>0){flag_tama--;}
+        
+        Actor actor=getOneIntersectingObject(ballet.class);
     
-    if(actor !=null){
+        if(actor !=null){
         getWorld().removeObject(this);
+        a.count--;
+        }
     }
-    
-    
-    
-}
+
 }
 
 
