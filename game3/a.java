@@ -14,14 +14,14 @@ public class a extends World
      * 
      */
     int pattern=0;
-    public int count=0;
+    static int count=0;
     public a()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
         
         addObject(new interimpresident(), 300, 350);
-        addObject(new teki(), 300, 50);
+        
         
     }
     public void act(){
@@ -31,19 +31,21 @@ public class a extends World
         
     }
     public void spawnvirus(){
-        if(count==4){return;}
-        switch(pattern){
-            case 0: addObject(new teki(), 300,30);
+        if(count<=10){
+           switch(pattern){
+            case 0: addObject(new teki(), (int)(Math.random()*300),30);
                     break;
-            case 1: addObject(new teki(), 150,60);
+            case 1: addObject(new teki(), (int)(Math.random()*600),60);
                     break;
-            case 2: addObject(new teki(), 240,30);
+            case 2: addObject(new teki(), (int)(Math.random()*300),90);
                     break;
-            case 3: addObject(new teki(), 400,60);
+            case 3: addObject(new teki(), (int)(Math.random()*600),120);
                     break;
+           }
+           count++;
+           pattern++;
         }
-        count++;
-        pattern++;
+        
         if(pattern==4){pattern=0;}
     }
 }
