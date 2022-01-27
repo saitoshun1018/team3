@@ -13,12 +13,12 @@ public class teki extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     int flag_tama=0;
-    int KP=0;
+   
     public void act() 
     {
         int x =getX();
         int y =getY();
-        
+      
         move(1);
         if(Greenfoot.getRandomNumber(10)<1){
         }
@@ -33,6 +33,7 @@ public class teki extends Actor
         if(actor !=null){
         getWorld().removeObject(this);
         a.count--;
+        Counter.score++;
         }
     }
 

@@ -18,7 +18,6 @@ public class ballet extends Actor
     {
         // Add your action code here.eeee
         move(1);
-        Actor actor = getOneIntersectingObject( ballet.class );
         int x =getX();
         int y =getY();
         
@@ -28,6 +27,7 @@ public class ballet extends Actor
             if(time<1){
                 getWorld().removeObject(this);
             }
-         
+
+    }
     }    
-}
+

@@ -15,13 +15,14 @@ public class a extends World
      */
     int pattern=0;
     static int count=0;
+    Counter counter = new Counter();
     public a()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
         
         addObject(new interimpresident(), 300, 350);
-        
+        addObject(counter, 500, 370);
         
     }
     public void act(){
