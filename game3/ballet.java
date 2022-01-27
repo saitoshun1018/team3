@@ -28,6 +28,6 @@ public class ballet extends Actor
             if(time<1){
                 getWorld().removeObject(this);
             }
-        
+         
     }    
 }
